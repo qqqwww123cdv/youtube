@@ -1,0 +1,7 @@
+.video {
+  width: 400px;
+  padding-bottom: 15px;
+}
+.video_item {
+  display: flex;
+}
