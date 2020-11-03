@@ -2,6 +2,7 @@ import React from 'react';
 import { Input, Button } from 'antd';
 import { useState } from 'react';
 import { VideoInfo} from "./VideoInfo";
+import Slider from "react-slick";
 import "./Video.css"
 
 function SearchVideo () {
@@ -18,7 +19,7 @@ function SearchVideo () {
         let params = {
             part: 'snippet',    
             key: key,
-            maxResults: '5',
+            maxResults: '40',
             q: Video
         };
         var esc = encodeURIComponent;
@@ -35,6 +36,13 @@ function SearchVideo () {
 
             })
     }
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4
+      };
 
     return (
         <>
@@ -44,10 +52,14 @@ function SearchVideo () {
                 <Button onClick={handleClick}>Search video</Button>
             </div>
         </div>
-        <div className={'video_item'}>
-                {videos.map(video => (
+        <Slider {...settings}>
+        {videos.map(video => (
                     <VideoInfo video ={video} />
                 ))}
+        </Slider>
+
+        <div className={'video_item'}>
+
         </div>
         </>
     )
