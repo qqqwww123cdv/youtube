@@ -33,12 +33,12 @@ function SearchVideo () {
             .then((props) => {
                 let videos = props.items
                 setVideos([...videos])
+                console.log(videos)
 
             })
     }
     const settings = {
         dots: true,
-        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4
@@ -46,21 +46,21 @@ function SearchVideo () {
 
     return (
         <>
-        <div className={'video'}>
-            <div >
+        <div className={'input-button'}>
+            <div className={'search-video'}>
                 <Input value={Video} onChange={e => {setVideo(e.target.value);}}/>
                 <Button onClick={handleClick}>Search video</Button>
             </div>
         </div>
-        <Slider {...settings}>
+        <div className={'all-videos'}>
+        <Slider {...settings} className={'slider'}>
         {videos.map(video => (
                     <VideoInfo video ={video} />
                 ))}
         </Slider>
-
-        <div className={'video_item'}>
-
         </div>
+
+
         </>
     )
 }
