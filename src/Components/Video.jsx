@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { VideoInfo} from "./VideoInfo";
 import Slider from "react-slick";
 import "./Video.css"
+import Search from 'antd/lib/input/Search';
 
 function SearchVideo () {
     const [Video, setVideo] = useState("");
@@ -46,14 +47,12 @@ function SearchVideo () {
 
     return (
         <>
-        <div className={'input-button'}>
-            <div className={'search-video'}>
-                <Input value={Video} onChange={e => {setVideo(e.target.value);}}/>
-                <Button onClick={handleClick}>Search video</Button>
+            <div>
+                <Input className={'input'}  placeholder="Write something..."value={Video} onChange={e => {setVideo(e.target.value);}}/>
+                <Button className={'button'} onClick={handleClick}>Search video</Button>
             </div>
-        </div>
-        <div className={'all-videos'}>
-        <Slider {...settings} className={'slider'}>
+        <div >
+        <Slider {...settings}   >
         {videos.map(video => (
                     <VideoInfo video ={video} />
                 ))}

@@ -1,6 +1,9 @@
 import React from 'react';
-import "./Video.css"
+import "./VideoInfo.css"
 import man from '../img/male-solid.svg'
+import calendar from '../img/calendar-alt-regular.svg'
+
+
 
 export const VideoInfo = ({video}) => {
 
@@ -18,14 +21,15 @@ export const VideoInfo = ({video}) => {
                     <div className={'first-info'}>
                         <img src={Image}/>
                         <div className={'link'}>
-                        <a href={`https://www.youtube.com/watch?v=${VideoId}`} className={'video-title'}>{Title}</a>                        </div>
+                        <a href={`https://www.youtube.com/watch?v=${VideoId}`} className={'video-title'}>{Title}</a>                        
+                        </div>
                     </div>
                     <div className={'sec-info'}>
-                        <img src={man} className={'man-img'}/><p className={'video-info'}>{Author}</p>
-                        <p className={'video-info'}>{PublishedAt}</p>
-                        <p>{Description}</p>
-                    
                         
+                            <img src={man} className={'man-img'}/><p className={'video-autor'}>{Author}</p>
+                            <img src={calendar} className={'calendar-img'}/> <p className={'video-date'}>{PublishedAt}</p>
+                            <p className={'video-descr'}>{Description}</p>
+
                     </div>
                 </div>    
         </div>
