@@ -1,0 +1,84 @@
+
+img {
+  width: 250px;
+  border-radius: 20px;
+
+}
+
+.all-info {
+  margin: 100px;
+  padding: 20px;
+  width: 340px;
+  height: 490px;
+    position: relative;
+
+}
+.container {
+  height: 400px;
+  border-radius: 20px;
+  background-color: rgb(219, 174, 174);
+  padding-left: 45px;
+  padding-top: 20px;
+}
+
+
+.first-info {
+  position: absolute;
+}
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(184, 44, 44,0.6);
+  width: 100%;
+}
+.video-title {
+  width: 100%;
+align-items: center;
+  color: white;
+  padding: 0 40px;
+}
+
+.sec-info {
+  margin-top: 190px;
+  position: relative;
+}
+
+.video-autor {
+  position: absolute;
+  margin-top: 20px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+}
+.man-img {
+  position: absolute;
+  margin: 10px;
+  height: 20px;
+  left: -140px;
+}
+.calendar-img{
+  position: absolute;
+  margin: 10px;
+  height: 20px;
+  left: -140px;
+  top: 40px;
+}
+.video-date{
+  position: absolute;
+  margin-top: 20px;
+  top: 50%;
+  left: 50%;
+    transform: translate(-50%, +70%);
+}
+
+.video-descr{
+  position: absolute;
+  margin-top: 85px;
+  text-align: center;
+  left: -40px;
+margin-left: 10px;
+margin-right: 10px;
+}
