@@ -19,17 +19,15 @@ export const VideoInfo = ({video}) => {
             <div className={'info'}>
                 <div className={'container'}>
                     <div className={'first-info'}>
-                        <img src={Image}/>
+                        <img className={'first-img'} src={Image}/>
                         <div className={'link'}>
                         <a href={`https://www.youtube.com/watch?v=${VideoId}`} className={'video-title'}>{Title}</a>                        
                         </div>
                     </div>
                     <div className={'sec-info'}>
-                        
                             <img src={man} className={'man-img'}/><p className={'video-autor'}>{Author}</p>
                             <img src={calendar} className={'calendar-img'}/> <p className={'video-date'}>{PublishedAt}</p>
                             <p className={'video-descr'}>{Description}</p>
-
                     </div>
                 </div>    
         </div>

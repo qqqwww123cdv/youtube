@@ -1,41 +1,54 @@
-
 img {
   width: 250px;
   border-radius: 20px;
-
 }
 
 .all-info {
-  margin: 100px;
-  padding: 20px;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 400px;
   width: 340px;
-  height: 490px;
-    position: relative;
-
+  height: 200px;
+  position: relative;
+  transition: transform 0.2s;
 }
+
 .container {
-  height: 400px;
+  height: 280px;
   border-radius: 20px;
   background-color: rgb(219, 174, 174);
   padding-left: 45px;
   padding-top: 20px;
+  transition: height 0.2s;
 }
-
+.container:hover {
+  height: 400px;
+}
+.container:hover .sec-info {
+  margin-top: 210px;
+}
 
 .first-info {
   position: absolute;
+  transition: transform 0.9s;
+}
+.first-info:hover {
+  transform: scale(1.2);
+}
+.first-img {
+  max-height: 190px;
 }
 .link {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(184, 44, 44,0.6);
+  background-color: rgba(184, 44, 44, 0.6);
   width: 100%;
 }
 .video-title {
   width: 100%;
-align-items: center;
+  align-items: center;
   color: white;
   padding: 0 40px;
 }
@@ -43,6 +56,7 @@ align-items: center;
 .sec-info {
   margin-top: 190px;
   position: relative;
+  transition: margin-top 0.2s;
 }
 
 .video-autor {
@@ -59,26 +73,32 @@ align-items: center;
   height: 20px;
   left: -140px;
 }
-.calendar-img{
+.calendar-img {
   position: absolute;
   margin: 10px;
   height: 20px;
   left: -140px;
   top: 40px;
 }
-.video-date{
+.video-date {
   position: absolute;
   margin-top: 20px;
   top: 50%;
   left: 50%;
-    transform: translate(-50%, +70%);
+  transform: translate(-50%, +70%);
 }
 
-.video-descr{
+.video-descr {
   position: absolute;
   margin-top: 85px;
   text-align: center;
   left: -40px;
-margin-left: 10px;
-margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.all-info:hover .video-descr {
+  opacity: 1;
 }

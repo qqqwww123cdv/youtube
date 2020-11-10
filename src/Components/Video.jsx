@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { VideoInfo} from "./VideoInfo";
 import Slider from "react-slick";
 import "./Video.css"
-import Search from 'antd/lib/input/Search';
 
 function SearchVideo () {
     const [Video, setVideo] = useState("");
