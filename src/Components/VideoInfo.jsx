@@ -12,7 +12,8 @@ export const VideoInfo = ({video}) => {
     const Author = video.snippet.channelTitle
     const Description = video.snippet.description
     const VideoId =  video.id.videoId
-    const PublishedAt = video.snippet.publishedAt
+    const date = video.snippet.publishedAt
+    const PublishedAt = new Date(Date.parse(date)).toString().slice(4, 15);
 
     return (
         <div className={'all-info'}>
